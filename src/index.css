@@ -1,16 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --primary: #faefef;
+  --secondary: #A5AEB6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+::-webkit-scrollbar {
+  width: 10px; 
+}
+::-webkit-scrollbar-track {
+  background: var(--secondary); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px; 
+}
+
+@font-face {
+  font-family: 'gow-font';
+  src: url('assets/fonts/GODOFWAR.TTF') format('truetype');
+}
+.custom-font {
+  font-family: 'SuaFonte', sans-serif;
 }
 
 a {
@@ -22,35 +40,76 @@ a:hover {
   color: #535bf2;
 }
 
+header {
+  font-family: 'gow-font';
+  margin-bottom: 50px;
+  padding-bottom: 10px;
+}
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  background-color: var(--primary);
+  font-family: 'gow-font';
 }
 
 h1 {
-  font-size: 3.2em;
+  color: #fff;
   line-height: 1.1;
 }
 
-button {
+h2, p, li {
+  color: #fff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
   border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-button:hover {
-  border-color: #646cff;
+
+table th,
+table td {
+  font-family: 'gow-font';
+  padding: 12px 16px;
+  border: 1px solid #ddd;
 }
-button:focus,
-button:focus-visible {
+
+table th {
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+table td {
+  color: #fff;
+}
+
+table tr:nth-child(even) {
+  background-color: #520000;
+}
+
+table tr:hover {
+  background-color: #6f0000;
+}
+
+table a {
+  text-decoration: underline;
+  font-family: Poppins;
+}
+
+.card {
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.card:hover {
+  filter: drop-shadow(0 0 px #ff0000aa);
+}
+.card.react:hover {
+  filter: drop-shadow(0 0 2em #fb0303aa);
+}
+.card:focus,
+.card:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
@@ -64,5 +123,34 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+.hero {
+  background: url(../public/background.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 80vh; 
+  border: #fff solid 2px;
+  border-radius: 20px;
+}
+
+.hero-content {
+  margin: 0 auto;
+  padding: 100px;
+}
+
+footer {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .hero {
+    background-position: center;
+    background-position: 65% center; 
+    height: 80vh;
+  }
+  .hero-content {
+    padding: 10px;
   }
 }

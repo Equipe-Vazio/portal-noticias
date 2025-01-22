@@ -7,7 +7,7 @@ const Header = () => {
       <h1 style={styles.title}>Portal de Notícias</h1>
       <nav style={styles.nav}>
         <a href="/" style={styles.link}>Home</a>
-        <a href="/about" style={styles.link}>Sobre</a>
+        <a href="/sobre" style={styles.link}>Sobre</a>
       </nav>
     </header>
   );

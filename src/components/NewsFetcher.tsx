@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+
+
 interface Article {
   source: {
     id: string | null;
@@ -16,8 +18,9 @@ interface Article {
   content: string | null;
 }
 
-const API_KEY = process.env.REACT_APP_API_KEY || 'default_api_key';
-const API_URL = process.env.REACT_APP_API_URL + 'v2/everything' || 'https://default_api_url';
+
+const API_KEY = process.env.VITE_API_KEY;
+const API_URL = process.env.VITE_API_URL + 'v2/everything';
 
 const NewsFetcher: React.FC = () => {
   const { query } = useParams<{ query: string }>();

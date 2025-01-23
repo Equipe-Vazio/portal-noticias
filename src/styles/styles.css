@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing:
+        border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7efef;
+    color: #000000;
+}
+
+.navbar {
+    background-color: #63231e;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 15px;
+    width: 90%;
+    margin: 15px auto;
+    padding: 20px;
+
+}
+
+.navbar p {
+    margin-left: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #63231e;
+    color: #ffffff;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #ff5722;
+}
+
+.section {
+    background-color: #ffffff;
+    margin: 32px auto;
+    padding: 24px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: #63231e;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.section p {
+    line-height: 26px;
+    font-size: 16px;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 16px;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+    line-height: 26px;
+}
+
+.section strong {
+    color: #63231e;
+}
+
+a {
+    color: '#fff';
+    text-decoration: 'none';
+    font-size: '16px';
+}

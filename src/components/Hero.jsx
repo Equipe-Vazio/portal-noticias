@@ -1,13 +1,19 @@
-// Hero.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Hero = ({ onSearch }) => {
+const Hero = () => {
   const [query, setQuery] = useState('');
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleSearch = () => {
-    if (onSearch) {
-      onSearch(query);
+    if (!query.trim()) {
+      setError('Por favor, insira um termo para busca.');
+      return;
     }
+    setError(null);
+    
+    navigate(`/resultados?query=${encodeURIComponent(query)}`);
   };
 
   return (
@@ -26,6 +32,7 @@ const Hero = ({ onSearch }) => {
             Pesquisar
           </button>
         </div>
+        {error && <p style={styles.error}>{error}</p>}
       </div>
     </section>
   );
@@ -39,7 +46,7 @@ const styles = {
     textAlign: 'center',
     backgroundColor: '#520000',
     color: '#fff',
-    height: '400px',
+    minHeight: '400px',
     padding: '20px',
   },
   content: {
@@ -49,10 +56,6 @@ const styles = {
   title: {
     fontSize: '36px',
     margin: '0 0 10px',
-  },
-  subtitle: {
-    fontSize: '18px',
-    margin: '0 0 20px',
   },
   searchContainer: {
     display: 'flex',
@@ -65,7 +68,7 @@ const styles = {
     padding: '10px',
     fontSize: '16px',
     border: 'none',
-    borderRadius: '20px 0 0 10px',
+    borderRadius: '20px 0 0 20px',
     outline: 'none',
     maxWidth: '400px',
   },
@@ -75,8 +78,12 @@ const styles = {
     backgroundColor: '#ff5722',
     color: '#fff',
     border: 'none',
-    borderRadius: '0 4px 4px 0',
+    borderRadius: '0 20px 20px 0',
     cursor: 'pointer',
+  },
+  error: {
+    color: 'red',
+    marginTop: '10px',
   },
 };
 

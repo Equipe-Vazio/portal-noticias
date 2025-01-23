@@ -64,3 +64,4 @@ O **Portal Notícias** utiliza dois principais endpoints da **News API** para bu
   - Ao clicar no botão **"Buscar"**, a função `handleSearch` é chamada, utilizando a palavra-chave como parâmetro para a função `getEverything`.
   - Os resultados retornados pela API (campo `articles`) são armazenados no estado `news`.
   - As notícias correspondentes à busca são exibidas como uma lista de links.
+

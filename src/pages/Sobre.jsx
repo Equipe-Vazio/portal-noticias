@@ -43,7 +43,7 @@ const Sobre = () => {
               <strong>CSS3</strong> – Para estilização e layout responsivo;
             </li>
             <li>
-              <strong>React</strong> – Para o consumir da API;
+              <strong>Vite + React</strong> – Para construir a página e consumir a API;
             </li>
             <li>
               <strong>Git</strong> – Para controle de versão e colaboração;

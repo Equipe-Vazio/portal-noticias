@@ -14,7 +14,7 @@ const Results = () => {
     if (!query) return;
 
     const fetchResults = async () => {
-      const apiKey = process.env.VITE_API_KEY;
+      const apiKey = process.env.VITE_API_KEY || '5151818d9f934e0dae6cac85d762facb';
       const apiUrl = `https://newsapi.org/v2/everything?q=${encodeURIComponent(
         query
       )}&apiKey=${apiKey}`;

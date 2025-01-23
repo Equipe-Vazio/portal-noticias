@@ -10,7 +10,7 @@ import Hero from '../components/Hero';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [articles, setArticles] = useState([]);
-  const API_KEY ='5151818d9f934e0dae6cac85d762facb'; 
+  const API_KEY = process.env.VITE_API_KEY; 
 
   useEffect(() => {
     setTimeout(() => {

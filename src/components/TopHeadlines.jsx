@@ -40,15 +40,6 @@ export default function TopHeadlines({article}){
             <Typography variant="body2" textAlign="center" color='var(--secondary)' style={{ fontFamily: 'Poppins' }}>
             {article.publishedAt}
             </Typography>
-            <Stack
-              direction={{ xs: 'column', sm: 'row' }}
-              alignSelf="center"
-              spacing={1}
-              useFlexGap
-              sx={{ pt: 2, width: { xs: '100%', sm: 'auto' }, fontFamily: 'Poppins' }}
-            >
-              
-            </Stack>
           </Stack>
         </Container>
         </Box>

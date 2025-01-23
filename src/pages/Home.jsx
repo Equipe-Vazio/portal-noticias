@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 1500);
   }, []);
 
   useEffect(() => {
@@ -36,11 +36,12 @@ export default function Home() {
 
   return (
     <>
-      <Header />
-      <Hero />
       {isLoading ? (
-        <Loading foto='./loadicon.gif' />
+        <Loading foto='./loading.png' />
       ) : (
+        <main>
+          <Header />
+         
         <div>
           <Carousel
             className='carousel'
@@ -70,6 +71,8 @@ export default function Home() {
             ))}
           </Carousel>
         </div>
+        <Hero />
+        </main>
       )}
     </>
   );

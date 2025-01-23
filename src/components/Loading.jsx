@@ -5,7 +5,6 @@ const Loading = ({foto}) => {
       <div className="loading-spinner">
         <img src={foto} alt="" />
       </div>
-      <p>Carregando...</p>
     </div>
   );
 };
